@@ -27,20 +27,17 @@ public class UserController {
         return new ResponseEntity<User>(user, HttpStatus.FOUND);
     }
 
-
     @PostMapping(value = "/newuser",consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<User> createUser(@RequestBody User user){
         userService.createUser(user);
         return new ResponseEntity<User>(user,HttpStatus.CREATED);
     }
 
-
     @PutMapping(value = "/user/{uname}",consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<User> updateUser(@RequestBody User user){
         userService.updateUser(user);
         return new ResponseEntity<User>(user,HttpStatus.OK);
     }
-
 
     @DeleteMapping(value = "/user/{uname}")
     public ResponseEntity<User> deleteUser(@PathVariable("uname") String uname){

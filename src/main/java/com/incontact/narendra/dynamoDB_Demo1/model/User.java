@@ -28,5 +28,4 @@ public class User {
 
 	@DynamoDBAttribute
 	private String password;
-
 }
