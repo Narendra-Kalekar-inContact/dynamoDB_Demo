@@ -13,14 +13,19 @@ public class User {
 
 	@DynamoDBHashKey
 	private String userName;
+
 	@DynamoDBAttribute
 	private String firstName;
+
 	@DynamoDBAttribute
 	private String lastName;
+
 	@DynamoDBAttribute
 	private String email;
+
 	@DynamoDBAttribute
 	private String mobile;
+
 	@DynamoDBAttribute
 	private String password;
 }
